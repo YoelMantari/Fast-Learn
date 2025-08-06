@@ -1,0 +1,24 @@
+{
+    "name": "fastlearn-app",
+    "version": "1.0.0",
+    "description": "FastLearn mobile web application",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx http-server -p 8000 -c-1",
+        "dev": "npx http-server -p 8000 -c-1 -o",
+        "build": "echo 'No build process needed for static files'",
+        "serve": "python -m http.server 8000"
+    },
+    "keywords": [
+        "education",
+        "quiz",
+        "pwa",
+        "mobile",
+        "javascript"
+    ],
+    "author": "FastLearn Team",
+    "license": "MIT",
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
+}

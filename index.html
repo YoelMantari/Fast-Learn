@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastLearn App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2196F3">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 FastLearn App</h1>
+        </header>
+        
+        <main id="main-content">
+            <!-- Initial screen -->
+            <div id="home-screen" class="screen active">
+                <button id="btnGitHub" class="btn btn-primary">
+                    📂 Cargar desde GitHub
+                </button>
+            </div>
+            
+            <!-- Question screen -->
+            <div id="question-screen" class="screen">
+                <div id="question-container">
+                    <div id="tvPregunta" class="question-text"></div>
+                    
+                    <div id="rgOpciones" class="options-container">
+                        <!-- Radio buttons will be added dynamically -->
+                    </div>
+                    
+                    <div class="button-container">
+                        <button id="btnEnviar" class="btn btn-success" disabled>
+                            ✅ Enviar Respuesta
+                        </button>
+                        
+                        <button id="btnContinuar" class="btn btn-primary" style="display: none;">
+                            ➡️ Continuar
+                        </button>
+                    </div>
+                    
+                    <div id="feedback-container">
+                        <div id="tvFeedback" class="feedback"></div>
+                        <div id="tvExplicacion" class="explanation"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Loading overlay -->
+        <div id="loading" class="loading hidden">
+            <div class="loading-spinner"></div>
+            <p>Cargando...</p>
+        </div>
+        
+        <!-- Directory modal -->
+        <div id="directoryModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Seleccionar archivo</h3>
+                    <button id="modalClose" class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="directoryList" class="directory-list">
+                        <!-- Directory items will be added dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Toast notifications -->
+        <div id="toast" class="toast hidden">
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
